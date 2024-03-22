@@ -7,10 +7,10 @@ void HeapSort::convertDataIntoHeap(std::vector<int> &data, int size, int i) {
     int leftChild = 2 * i + 1;
     int rightChild = 2 * i + 2;
 
-    if (leftChild < size && data[leftChild] > data[largest]) {
+    if (leftChild < size && data[leftChild] < data[largest]) {
         largest = leftChild;
     }
-    if (rightChild < size && data[rightChild] > data[largest]) {
+    if (rightChild < size && data[rightChild] < data[largest]) {
         largest = rightChild;
     }
     if (largest != i) {
